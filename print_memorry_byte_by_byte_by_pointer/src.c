@@ -25,6 +25,6 @@ int main()
     data.data4 = 0xABCD;
     print_memory_range(&data, sizeof(data));
     struct SDataSet *p_struct = &data; // pointer to point in structure's address
-    p_struct->data1= 0x4;
+    p_struct->data1= 0x4;//not write (*) but use (->) to point member in structure
     printf("%x\t%x",p_struct->data1,data.data1);
 }
